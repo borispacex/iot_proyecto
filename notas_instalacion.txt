@@ -1,0 +1,8 @@
+1. Instalacion POSTGRES con docker
+    docker run -p 5432:5432  --name my-postgres -e POSTGRES_PASSWORD=postgres -d -v /Users/boris/Documents/data-docker/postgres12:/data postgres
+    docker exec -it my-postgres bash
+    docker exec -it my-postgres psql -U postgres -W
+
+2. Instalacion de REDIS
+    docker run --name my-redis -p 6379:6379 --restart always -v /Users/boris/Documents/data-docker/redis:/data --detach redis
+    docker exec -it my-redis bash

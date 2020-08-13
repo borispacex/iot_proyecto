@@ -1,0 +1,33 @@
+{
+  "name": "iot_mqtt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple IoT platform - MQTT Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "start-dev": "DEBUG=iot_mqtt:* nodemon server.js",
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borisvargas/iot_proyecto.git"
+  },
+  "author": "Boris Vargas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/borisvargas/iot_proyecto/issues"
+  },
+  "homepage": "https://github.com/borisvargas/iot_proyecto#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^4.1.1",
+    "iot_db": "file:../iot_db",
+    "mosca": "^2.8.3",
+    "redis": "^3.0.2"
+  }
+}

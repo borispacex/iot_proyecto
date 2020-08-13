@@ -1,0 +1,10 @@
+
+1. Configuracion Base de datos postgres
+- Para ingresar a la BD con docker
+    docker exec -it postgres12 bash
+- Ingresar a consola PSQL
+    psql postgres -U postgres -W
+- Configuraciones
+    CREATE ROLE boris WITH LOGIN PASSWORD 'boris';
+    CREATE DATABASE iot_db;
+    GRANT ALL PRIVILEGES ON DATABASE iot_db TO boris;
